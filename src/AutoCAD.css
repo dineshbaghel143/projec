@@ -1,0 +1,212 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 28px;
+}
+
+/* ===== HEADER ===== */
+.page-header {
+  background: linear-gradient(135deg, #002147, #003b73);
+  color: #fff;
+  padding: 35px 15px;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+/* ===== LAYOUT ===== */
+.page-layout {
+  max-width: 1300px;
+  margin: 0 auto;   /* 🔥 FORCE CENTER */
+  display: flex;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+
+/* ===== MAIN CONTENT ===== */
+.content {
+  flex: 1;
+}
+
+.content h2 {
+  margin: 30px 0 10px;
+  color: #002147;
+}
+
+.content h3 {
+  margin-top: 20px;
+  color: #003b73;
+}
+
+.content p {
+  margin-top: 8px;
+  color: #333;
+}
+
+/* ===== COURSE IMAGE ===== */
+.course-image {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 25px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== LIST ===== */
+.learn-list {
+  margin: 15px 0 25px 25px;
+}
+
+.learn-list li {
+  font-weight: bold;
+  color: #002147;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 300px;
+  position: sticky;
+  top: 20px;
+}
+
+/* ===== POPULAR COURSES BOX ===== */
+.popular-courses {
+  background: linear-gradient(135deg, #ffb3c6, #ffe066);
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+.popular-courses h3 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #002147;
+}
+
+.popular-courses ul {
+  list-style: none;
+}
+
+.popular-courses li {
+  margin-bottom: 12px;
+}
+
+.popular-courses a {
+  text-decoration: none;
+  color: #002147;
+  font-weight: bold;
+  background: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  display: block;
+  transition: 0.3s;
+}
+
+.popular-courses a:hover {
+  background: #002147;
+  color: #fff;
+  transform: translateX(6px);
+}
+
+/* ===== SOCIAL ICONS ===== */
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.social.instagram { background: #e1306c; }
+.social.facebook { background: #1877f2; }
+.social.youtube { background: #ff0000; }
+
+.social:hover {
+  transform: scale(1.15);
+  opacity: 0.9;
+}
+
+/* ===== FAQ ===== */
+.faq-title {
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+.faq-item {
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #f2f2f2;
+  border: none;
+  cursor: pointer;
+}
+
+.faq-question:hover {
+  background: #e6e6e6;
+}
+
+.faq-answer {
+  padding: 14px;
+  display: none;
+  animation: fade 0.3s ease;
+}
+
+/* ===== FAQ ANIMATION ===== */
+@keyframes fade {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+ .page-layout {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+
+  .sidebar {
+  width: 300px;
+  position: sticky;
+  top: 120px;
+}
+
+}
+
+
+.course-page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: #f4f7fb;
+}
+

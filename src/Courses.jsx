@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import gsap from "gsap";
 import "./Courses.css";
 
@@ -19,8 +20,8 @@ const courseData = [
     duration: "3 Months",
     mode: "Offline",
     level: "Beginner",
-    desc: "Learn computer fundamentals, MS Office, internet & typing.",
-    link: "basic-computer.html",
+    desc: "Computer basics, MS Office, internet & typing.",
+    link: "/courses/basic-computer",
   },
   {
     title: "ADCA Course",
@@ -31,8 +32,8 @@ const courseData = [
     duration: "12 Months",
     mode: "Online / Offline",
     level: "Advanced",
-    desc: "Advanced diploma covering software, accounting & programming.",
-    link: "adca-course.html",
+    desc: "Advanced diploma in computer applications.",
+    link: "/courses/adca",
   },
   {
     title: "English Typing Course",
@@ -43,8 +44,8 @@ const courseData = [
     duration: "2 Months",
     mode: "Offline",
     level: "Beginner",
-    desc: "Increase typing speed with accuracy and real practice.",
-    link: "english-typing.html",
+    desc: "Speed & accuracy focused typing training.",
+    link: "/courses/typing",
   },
   {
     title: "DCA Course",
@@ -55,11 +56,11 @@ const courseData = [
     duration: "6 Months",
     mode: "Online / Offline",
     level: "Intermediate",
-    desc: "Diploma course in computer applications with projects.",
-    link: "dca-course.html",
+    desc: "Diploma in Computer Applications.",
+    link: "/courses/dca",
   },
   {
-    title: "Tally With GST",
+    title: "Tally with GST",
     image: tallyImg,
     rating: "★★★★★",
     score: "4.6",
@@ -67,11 +68,11 @@ const courseData = [
     duration: "3 Months",
     mode: "Offline",
     level: "Professional",
-    desc: "Accounting, GST returns & real company practice.",
-    link: "tally-gst.html",
+    desc: "Accounting, GST returns & practice.",
+    link: "/courses/tally-gst",
   },
   {
-    title: "MS Office Full Course",
+    title: "Web Development Course",
     image: webImg,
     rating: "★★★★★",
     score: "4.9",
@@ -79,10 +80,11 @@ const courseData = [
     duration: "2 Months",
     mode: "Offline",
     level: "Beginner",
-    desc: "Word, Excel, PowerPoint with practical exercises.",
-    link: "ms-office.html",
+    desc: "Word, Excel, PowerPoint with projects.",
+    link: "/courses/ms-office",
   },
 ];
+
 
 const Courses = () => {
   useEffect(() => {
@@ -111,13 +113,12 @@ const Courses = () => {
 
       <div className="course-grid">
         {courseData.map((course, i) => (
-          <a
+          <Link
             key={i}
-            href={course.link}
-            target="_blank"
-            rel="noreferrer"
+            to={course.link}
             className="course-card"
-          >
+  >
+
             <img
               src={course.image}
               className="card-img"
@@ -149,7 +150,7 @@ const Courses = () => {
                 <span className="off-tag">| 100% OFF</span>
               </div>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
         {/* MORE COURSES BUTTON */}

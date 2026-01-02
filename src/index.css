@@ -1,0 +1,9 @@
+/* FORCE ALL PAGES TO CENTER */
+#root {
+  width: 100%;
+}
+
+main, section, .page-layout {
+  margin-left: auto;
+  margin-right: auto;
+}

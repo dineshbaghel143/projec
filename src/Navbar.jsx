@@ -70,33 +70,40 @@ function Navbar() {
             <div className="menu-item">
               <a href="#">Courses ▾</a>
               <div className="mega">
+
+                {/* COLUMN 1 */}
                 <div>
                   <h4>Computer Courses</h4>
-                  <a href="#">Basic Computer</a>
-                  <a href="#">ADCS</a>
-                  <a href="#">ADIWA</a>
-                  <a href="#">Tally + GST</a>
-                  <a href="#">DIOA</a>
-                  <a href="#">Typing</a>
+                  <NavLink to="/courses/basic-computer">Basic Computer</NavLink>
+                  <NavLink to="/courses/adca">ADCA</NavLink>
+                  <NavLink to="/courses/adiwa">ADIWA</NavLink>
+                  <NavLink to="/courses/tally-gst">Tally + GST</NavLink>
+                  <NavLink to="/courses/dioa">DIOA</NavLink>
+                  <NavLink to="/courses/typing">Typing</NavLink>
                 </div>
+
+                {/* COLUMN 2 */}
                 <div>
                   <h4>Programming</h4>
-                  <a href="#">C / C++</a>
-                  <a href="#">Java</a>
-                  <a href="#">Python</a>
-                  <a href="#">Web Development</a>
-                  <a href="#">HTML / CSS</a>
-                  <a href="#">JavaScript</a>
+                  <NavLink to="/courses/c-cpp">C / C++</NavLink>
+                  <NavLink to="/courses/java">Java</NavLink>
+                  <NavLink to="/courses/python">Python</NavLink>
+                  <NavLink to="/courses/html-css">HTML</NavLink>
+                  <NavLink to="/courses/javascript">JavaScript</NavLink>
                 </div>
+
+                {/* COLUMN 3 */}
                 <div>
                   <h4>Professional</h4>
-                  <a href="#">AutoCad</a>
-                  <a href="#">Graphic Design</a>
-                  <a href="#">Corel Draw</a>
-                  <a href="#">PhotoShop</a>
-                  <a href="#">DataEntry</a>
+                  <NavLink to="/courses/autocad">AutoCAD</NavLink>
+                  <NavLink to="/courses/graphic-design">Graphic Design</NavLink>
+                  <NavLink to="/courses/corel-draw">Corel Draw</NavLink>
+                  <NavLink to="/courses/photoshop">Photoshop</NavLink>
+                  <NavLink to="/courses/data-entry">Data Entry</NavLink>
                 </div>
+
               </div>
+
             </div>
 
             <span className="separator">|</span>
@@ -160,8 +167,12 @@ function Navbar() {
 
   {courseOpen && (
     <div className="mobile-dropdown">
-      <a href="#">Basic Computer</a>
-      <a href="#">Tally + GST</a>
+      <NavLink to="/courses/basic-computer" onClick={() => setMobileOpen(false)}>
+          Basic Computer
+      </NavLink>
+      <NavLink to="/courses/tally-gst" onClick={() => setMobileOpen(false)}>
+        Tally + GST
+      </NavLink>
       <a href="#">Web Development</a>
       <a href="#">Digital Marketing</a>
     </div>
